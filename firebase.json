@@ -1,0 +1,9 @@
+{
+  "firebase": "skillsetraffle",
+  "public": "public",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
