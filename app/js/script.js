@@ -11,6 +11,13 @@ $(document).ready(function () {
         var name = $('#name').val();
         var mail = $('#mail').val();
         // console.log(name,mail)
-        ref.push({name:name,mail:mail});
+        ref.push({name:name,mail:mail},function(data){
+            var content = $('.content');
+            if(data == null){
+                // Success
+            }else{
+                // Error
+            }
+        });
     })
 });

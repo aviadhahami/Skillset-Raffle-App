@@ -74,3 +74,14 @@ html,body{
 .no-focus:focus{
     outline:none;
 }
+
+
+
+
+
+.success{
+    display: none;
+}
+.error{
+    display: none;
+}
