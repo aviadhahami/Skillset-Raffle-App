@@ -19,11 +19,12 @@
     <div class="header">
         <h1 class="title">Enter your name and email in order to enter the raffle!</h1>
     </div>
-    <div class="form">
-        <input autocomplete="off" type="text" id="name" class="no-focus" placeholder="Name">
+    <form class="form" id="form">
+        <input required autocomplete="off" type="text" id="name" class="no-focus" placeholder="Name">
         <br>
-        <input autocomplete="off" type="email" id="mail" class="no-focus" placeholder="eMail">
-    </div>
+        <input required  autocomplete="off" type="email" id="mail" class="no-focus" placeholder="eMail">
+        <input type="submit" value="Give me prizes!">
+    </form>
 </div>
 <script src="js/script.js"></script>
 </body>
