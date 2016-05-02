@@ -26,5 +26,22 @@ $(document).ready(function () {
         }
         populateAmountOfPoeple(data.length);
         enableButton();
+
+        $('#raffle').on('click',function(){
+            var length = data.length;
+            var amount =10;
+            var personPlaceHolder = $('#person-name');
+            var winner;
+            for(var i=0;i<amount;i++){
+                winner = Math.floor(Math.random() * length);
+                if(data[winner]){
+                    console.log('in')
+                    personPlaceHolder.text(data[winner]['name']);
+                }
+            }
+
+        });
     });
+
+
 });
