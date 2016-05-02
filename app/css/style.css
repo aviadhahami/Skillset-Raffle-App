@@ -8,6 +8,10 @@ html,body{
     min-height: 100vh;
     background-color: #009688;
 }
+.content{
+    visibility: visible;
+    transition: all .2s ease;
+}
 
 .title{
     padding-top: 2em;
@@ -80,8 +84,13 @@ html,body{
 
 
 .success{
-    display: none;
+    display:  none;
+    transition: all 2s ease;
+
 }
 .error{
-    display: none;
+
+    display:  none;
+    transition: all 2s ease;
+
 }

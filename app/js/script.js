@@ -3,7 +3,7 @@
  */
 
 $(document).ready(function () {
-    var ref = new Firebase("https://skillsetraffle.firebaseio.com/");
+    var ref = new Firebase("https://skillsetraffle.firebaseio.com/").child('raffleData');
 
     // ref.push(null);
     $('#form').submit(function(e){
@@ -12,12 +12,16 @@ $(document).ready(function () {
         var mail = $('#mail').val();
         // console.log(name,mail)
         ref.push({name:name,mail:mail},function(data){
-            var content = $('.content');
-            if(data == null){
+            $('.content').css('display','none');
+            var res;
+            if(data == null){   
                 // Success
+                res = $('.success');
             }else{
                 // Error
+                res = $('error');
             }
+            res.css('display','block');
         });
     })
 });
