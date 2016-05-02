@@ -55,7 +55,11 @@ button#raffle:hover{
 button:focus{
     outline: none;
 }
+button#raffle[disabled]{
+    background-color: rgba(255,255,255,0.1);
+    border:1px solid rgba(255,255,255,0.1);
 
+}
 .raffle-data{
     text-align: center;
     font-family: 'roboto';
