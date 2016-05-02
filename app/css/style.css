@@ -1,0 +1,16 @@
+html,body{
+    margin: 0 auto;
+    padding:0;
+}
+.container{
+    margin: 0 auto;
+    background-color: #009688;
+}
+
+.title{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    font-size: 3em;
+    text-align: center;
+    margin: auto;
+}
