@@ -1,16 +1,45 @@
 html,body{
     margin: 0 auto;
     padding:0;
+    overflow: hidden;
 }
 .container{
-    margin: 0 auto;
+    width:100%;
+    min-height: 100vh;
     background-color: #009688;
 }
 
 .title{
+    padding-top: 2em;
     font-family: 'Roboto', sans-serif;
     font-weight: 200;
-    font-size: 3em;
+    font-size: 5em;
     text-align: center;
+    max-width: 55%;
     margin: auto;
+    color: rgba(255,255,255,0.90);
+}
+
+.logo{
+    position: absolute;
+    float: left;
+    max-width: 20em;
+    /*margin: auto;*/
+
+}
+
+.form{
+    padding-top: 3em;
+    display: block;
+    margin: 0 auto;
+}
+.form input {
+    display: block;
+    width: 55%;
+    /*height: 5em;*/
+    margin: 1% auto;
+    border: 0;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-size: 4em;
 }
