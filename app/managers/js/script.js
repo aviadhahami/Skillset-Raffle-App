@@ -12,11 +12,15 @@ $(document).ready(function () {
 
     };
 
+
     disableButton();
     var data = [];
     var populateAmountOfPoeple = function (size) {
-        console.log(size)
-        $('#numOfPeople').html('choosing between <b>' + size + '</b> participants');
+        $('#numOfPeople').html('choosing from <b>' + size + '</b> participants');
+    };
+    var removeSelected = function (index) {
+        data.splice(index,1);
+        populateAmountOfPoeple(data.length);
     };
     ref.once('value', function(dataSnapshot) {
         // handle read data.
@@ -28,6 +32,7 @@ $(document).ready(function () {
         enableButton();
 
         $('#raffle').on('click',function(){
+            disableButton();
             var length = data.length;
             var amount =10;
             var personPlaceHolder = $('#person-name');
@@ -35,10 +40,11 @@ $(document).ready(function () {
             for(var i=0;i<amount;i++){
                 winner = Math.floor(Math.random() * length);
                 if(data[winner]){
-                    console.log('in')
-                    personPlaceHolder.text(data[winner]['name']);
+                    personPlaceHolder.text(data[winner]['name']+' '+data[winner]['mail']);
                 }
             }
+            enableButton();
+            removeSelected(winner);
 
         });
     });

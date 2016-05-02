@@ -67,3 +67,10 @@ button#raffle[disabled]{
     font-size: 2em;
     color: rgba(255,255,255,0.9);
 }
+#person-name{
+    display: block;
+    margin:auto;
+    border:1px solid white;
+    max-width:50%;
+    text-align: center;
+}
